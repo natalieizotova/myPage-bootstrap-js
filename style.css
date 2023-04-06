@@ -219,7 +219,24 @@ h2 {
     margin-left: 50px;
 }
 
+.item {
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.8s;
+}
 
+.left {
+    transform-origin: left center;
+    transform: translateX(-50%);
+}
+.right {
+    transform-origin: right center;
+    transform: translateX(50%);
+}
+
+.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 @media (max-width: 991.98px) {
     .portfolio_content, .about, #container {
