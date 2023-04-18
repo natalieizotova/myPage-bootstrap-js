@@ -90,3 +90,19 @@ const observer = new IntersectionObserver(entries => {
 items.forEach(item => {
   observer.observe(item);
 });
+
+const hamburger = document.querySelector('.hamburger');
+const menu = document.querySelector('.menu');
+const closeEl = document.querySelector('.menu_close')
+
+hamburger.addEventListener('click', ()=>{
+    menu.classList.add('active')
+})
+
+closeEl.addEventListener('click', ()=>{
+    menu.classList.remove('active')
+})
+
+
+
+
