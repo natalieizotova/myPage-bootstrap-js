@@ -1,0 +1,109 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+.container {
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 600px;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    margin-right: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-image: linear-gradient(#66ccff, #3366ff);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.back-link{
+    text-decoration: none;
+    color: white;
+
+    }
+.back{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-image: linear-gradient(#5bbdff, #2655ff);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-image: linear-gradient(#4fa8ff, #194cff);
+    transform: scale(0.95);
+}
+
+ul {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    width: 300px;
+    margin: 0 auto;
+    animation: fade-in 0.5s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #f2f2f2;
+}
+
+#clearBtn {
+    background-image: linear-gradient(#ff8080, #ff5050);
+}
+
+#clearBtn:hover {
+    background-image: linear-gradient(#ff7373, #ff3333);
+}
+
+#clearBtn:active {
+    background-image: linear-gradient(#ff6666, #ff0000);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
