@@ -105,4 +105,63 @@ closeEl.addEventListener('click', ()=>{
 
 
 
+// pieChart
+
+
+const data = [
+  { language: "Python", percent: 30 },
+  { language: "Java", percent: 20 },
+  { language: "JavaScript", percent: 30 },
+  { language: "TypeScript", percent: 20 }
+];
+
+
+const width = 400;
+const height = 400;
+const radius = Math.min(width, height) / 2;
+
+
+const color = d3.scaleOrdinal()
+  .domain(data.map(d => d.language))
+  .range(["#E64C3C", "#3C8DAD", "#F0C808", "#4DB6AC"]);
+
+
+const pie = d3.pie()
+  .value(d => d.percent);
+
+
+const arc = d3.arc()
+  .innerRadius(0)
+  .outerRadius(radius);
+
+
+const svg = d3.select("#chart")
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height)
+  .append("g")
+  .attr("transform", `translate(${width / 2},${height / 2})`);
+
+
+svg.selectAll("path")
+  .data(pie(data))
+  .enter()
+  .append("path")
+  .attr("d", arc)
+  .attr("fill", d => color(d.data.language))
+  .append("title")
+  .text(d => `${d.data.language}: ${d.data.percent}%`);
+
+
+svg.selectAll("text")
+  .data(pie(data))
+  .enter()
+  .append("text")
+  .attr("transform", d => `translate(${arc.centroid(d)})`)
+  .attr("dy", "0.35em")
+  .text(d => `${d.data.language}: ${d.data.percent}%`)
+  .attr("fill", "white")
+  .attr("font-size", "16px")
+  .attr("font-weight", "bold")
+  .attr("text-anchor", "middle");
 

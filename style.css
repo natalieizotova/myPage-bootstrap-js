@@ -350,21 +350,58 @@ input[type="submit"]:active {
     transition: all 1s;
 }
 .menu.active{
-     left:50%;
-     visibility: visible;
-     opacity: 1;
- }
+    left:50%;
+    visibility: visible;
+    opacity: 1;
+}
 .menu_block{
-     padding-top: 140px;
-     padding-left: 40px;
-     position: relative;
-     z-index: 10;
-     width: 345px;
-     height: 100vh;
-     transition: all 0.6s;
- }
+    padding-top: 140px;
+    padding-left: 40px;
+    position: relative;
+    z-index: 10;
+    width: 345px;
+    height: 100vh;
+    transition: all 0.6s;
+}
 
 
 
-
-
+/* pie chart */
+#chart {
+    margin: 50px auto;
+    text-align: center;
+  }
+  
+  .legend rect {
+    fill: white;
+    stroke: black;
+    stroke-width: 2;
+  }
+  
+  .legend text {
+    font-size: 12px;
+    font-weight: bold;
+    text-anchor: end;
+    margin-right: 5px;
+  }
+  
+  path {
+    transition: fill 0.3s ease-in-out;
+  }
+  
+  path:hover {
+    fill-opacity: 0.7;
+    cursor: pointer;
+  }
+  
+  text {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  
+  @media (max-width: 600px) {
+    #chart {
+      width: 100%;
+      height: auto;
+    }
+  }
