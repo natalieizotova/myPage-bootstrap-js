@@ -1,0 +1,143 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-image: url("media/weather-back.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+h1 {
+    color: antiquewhite;
+}
+
+#container {
+    width: 700px;
+    border-radius: 25px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-image: linear-gradient(rgba(233, 200, 200, 0.3), rgba(0, 0, 0, 0.8));
+    min-height: 100vh;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#input {
+    background-color: rgba(254, 253, 255, 0.5);
+    border-radius: 20px;
+    border: 3px solid #CDF3A2;
+    padding: 15px;
+    font-size: 20px;
+}
+
+#input:focus {
+    background-color: rgb(220, 227, 233);
+}
+
+#when_where {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#city {
+    color: white;
+    font-size: 45px;
+    line-height: 30px;
+}
+
+#date {
+    color: white;
+    font-size: 25px;
+}
+
+#now {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#temperature {
+    color: white;
+    font-size: 90px;
+    font-weight: bold;
+    text-shadow: 5px 8px black;
+    margin: 0;
+}
+
+#feelsLike {
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#conditions {
+    color: white;
+    font-size: 32px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#variation {
+    color: white;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+button {
+    margin-right: 150px;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-image: linear-gradient(#66ccff, #3366ff);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 40px;
+}
+
+.back-link {
+    text-decoration: none;
+    color: white;
+
+}
+
+.back {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+}
+
+button:hover {
+    background-image: linear-gradient(#5bbdff, #2655ff);
+    transform: scale(1.05);
+}
+
+button:active {
+    background-image: linear-gradient(#4fa8ff, #194cff);
+    transform: scale(0.95);
+}
+
+@media (max-width: 991.98px) {
+    body {
+        flex-direction: column;
+    }
+
+    #container {
+        width: 380px;
+    }
+}
